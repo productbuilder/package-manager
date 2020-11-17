@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/Oswald-VariableFont_wght.ttf");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
