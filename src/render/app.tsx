@@ -1,14 +1,15 @@
 import React from 'react';
 import AppBar from './components/app-bar';
+import MainView from './components/views/main.view';
 
-// type Props = {};
+interface Props {};
 
-const App: React.FC = () => {
+const App: React.FC<Props> = () => {
   return (
-    <>
-      <AppBar />
-      <div className="test">This is from the app</div>
-    </>
+    <div className="app">
+      <AppBar className="appbar" />
+      <MainView className="mainview" />
+    </div>
   );
 };
 

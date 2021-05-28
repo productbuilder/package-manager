@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Operator Mono";
+  src: url("./fonts/Oswald-VariableFont_wght.ttf");
+}
+
+html, body, .app {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.appbar {
+  position: relative;
+  width: 100vw;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.mainview {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 30px);
+}
