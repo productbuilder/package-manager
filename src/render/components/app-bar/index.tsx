@@ -10,6 +10,8 @@ import MenuButton from './menu-button';
 import Menu from './menu';
 import MenuItem from './menu-item';
 import Separator from './separator';
+import useUIStore from '../../zustand/ui.store';
+import FileMenu from './file-menu';
 
 interface Props {
   className?: string;
@@ -51,19 +53,10 @@ const AppBar: React.FC<Props> = ({ className }) => {
         <div className={style['left-side']}>
           <Logo className={style['logo']} />
           <MenuButton title="File">
-            <Menu>
-              <MenuItem title="New File" onClick={()=>console.log("testen")} shortcut="Crtl+N"/>
-              <Separator />
-              <MenuItem title="Open File..." onClick={()=>console.log("testen")} shortcut="Crtl+O"/>
-              <MenuItem title="Open Recent" onClick={()=>console.log("testen")}/>
-              <Separator />
-              <MenuItem title="Save" onClick={()=>console.log("testen")} shortcut="Crtl+S"/>
-              <MenuItem title="Save As..." onClick={()=>console.log("testen")} shortcut="Crtl+Shift+S"/>
-              <Separator />
-              <MenuItem title="Revert File" onClick={()=>console.log("testen")}/>
-              <Separator />
-              <MenuItem title="Exit" onClick={()=>console.log("testen")}/>
-            </Menu>
+            <FileMenu />
+          </MenuButton>
+          <MenuButton title="Tester">
+            <FileMenu />
           </MenuButton>
         </div>
         <div className={style['title']}>

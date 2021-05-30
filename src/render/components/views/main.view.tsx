@@ -1,5 +1,6 @@
 import { ipcRenderer } from 'electron';
 import React, { useEffect, useRef, useState } from 'react';
+import useUIStore from '../../zustand/ui.store';
 import StringInput from '../form/string-input';
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const MainView: React.FC<Props> = ({ className }) => {
+  const setShowMenu = useUIStore((state) => state.setShowMenu);
   const [data, setData] = useState<any>(null);
   const [fields, setFields] = useState<any[]>([]);
 
@@ -76,7 +78,7 @@ const MainView: React.FC<Props> = ({ className }) => {
   }
 
   const hanleClick = () => {
-    console.log("click!")
+    setShowMenu(false)
   }
 
   return (

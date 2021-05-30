@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import style from './app-bar.module.scss';
 
 interface Props {
-  children?: JSX.Element[] | JSX.Element
+  children?: ReactNode
 };
 
 const Menu: React.FC<Props> = ({children}) => {
